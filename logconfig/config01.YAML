@@ -1,0 +1,47 @@
+version: 1
+
+formatters:
+  simple:
+    format: "%(asctime)s %(name)s: %(message)s"
+  extended:
+    format: "%(asctime)s %(name)s %(levelname)s: %(message)s"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: simple
+
+  info_handler:
+    class: logging.FileHandler
+    level: INFO
+    filename: info.log
+    formatter: extended
+  
+  warning_handler:
+    class: logging.FileHandler
+    level: WARNING
+    filename: warn.log
+    formatter: extended
+
+  root_handler:
+    class: logging.FileHandler
+    level: INFO
+    filename: root.log
+    formatter: extended
+
+loggers:
+  dev:
+    handlers: [console, info_handler]
+    propagate: no
+  anotherone:
+    handlers: [console, file_handler]
+    propagate: no
+  example1:
+    handlers: [console, warning_handler]
+    propagate: no
+  test:
+    handlers: [file_handler]
+root:
+  handlers: [root_handler]
+  propagate: no

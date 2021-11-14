@@ -1,0 +1,1 @@
+https://zetcode.com/python/logging/
