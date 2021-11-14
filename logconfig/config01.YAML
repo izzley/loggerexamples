@@ -5,6 +5,8 @@ formatters:
     format: "%(asctime)s %(name)s: %(message)s"
   extended:
     format: "%(asctime)s %(name)s %(levelname)s: %(message)s"
+  detailed:
+    format: "%(asctime)s %(levelname)s - [%(filename)s: line %(lineno)s] - %(funcName)s - %(message)s"
 
 handlers:
   console:
@@ -16,32 +18,41 @@ handlers:
     class: logging.FileHandler
     level: INFO
     filename: info.log
-    formatter: extended
+    formatter: simple
   
-  warning_handler:
-    class: logging.FileHandler
-    level: WARNING
-    filename: warn.log
-    formatter: extended
-
-  root_handler:
+  log_handler:
     class: logging.FileHandler
     level: INFO
+    filename: logconfig/logger.log
+    formatter: detailed
+  
+  warn_handler:
+    class: logging.FileHandler
+    level: WARN
+    filename: warn.log
+    formatter: detailed
+  
+  root_handler:
+    class: logging.FileHandler
+    level: DEBUG
     filename: root.log
-    formatter: extended
+    formatter: detailed
 
 loggers:
   dev:
     handlers: [console, info_handler]
     propagate: no
   anotherone:
-    handlers: [console, file_handler]
+    handlers: [console, info_handler]
     propagate: no
   example1:
-    handlers: [console, warning_handler]
+    handlers: [console, warn_handler]
     propagate: no
-  test:
-    handlers: [file_handler]
+  logconfig:
+    handlers: [console, log_handler]
+    propagate: no
+# propagate means pass to parent handlers (True or False). Not sure why all these set to no still prints to root.log file
+# https://docs.python.org/3/library/logging.html#logging.Logger.propagate
 root:
-  handlers: [root_handler]
+  handlers: [console, root_handler]
   propagate: no

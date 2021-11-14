@@ -1,1 +1,3 @@
-https://zetcode.com/python/logging/
+This repo is testing ground for loggers.
+
+- https://zetcode.com/python/logging/
