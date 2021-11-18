@@ -9,7 +9,7 @@ with open('logconfig/config01.YAML', 'r') as f:
 logging.config.dictConfig(log_cfg)
 
 logger = logging.getLogger()
-logger.setLevel(logging.WARN)
+logger.setLevel(logging.INFO)
 
 logger.info('This is an info message')
 logger.error('This is an error message')

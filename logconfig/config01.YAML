@@ -1,58 +1,81 @@
 version: 1
 
 formatters:
+  brief:
+    format: "%(asctime)s: %(message)s"
   simple:
     format: "%(asctime)s %(name)s: %(message)s"
   extended:
     format: "%(asctime)s %(name)s %(levelname)s: %(message)s"
   detailed:
     format: "%(asctime)s %(levelname)s - [%(filename)s: line %(lineno)s] - %(funcName)s - %(message)s"
+  error:
+        format: "%(levelname)s <PID %(process)d:%(processName)s> %(name)s.%(funcName)s(): %(message)s"
 
 handlers:
+  user_interface_handler:
+    class: logging.FileHandler
+    level: INFO
+    filename: logfiles/UI.log
+    formatter: brief
+
+  log_handler:
+    class: logging.FileHandler
+    level: INFO
+    filename: logfiles/logger.log
+    formatter: simple
+
   console:
     class: logging.StreamHandler
-    level: INFO
+    level: DEBUG
+    formatter: detailed
+    stream: ext://sys.stdout
+
+  debug_handler:
+    class: logging.FileHandler
+    level: DEBUG
+    filename: logfiles/debug.log
     formatter: simple
 
   info_handler:
     class: logging.FileHandler
     level: INFO
-    filename: info.log
+    filename: logfiles/info.log
     formatter: simple
-  
-  log_handler:
-    class: logging.FileHandler
-    level: INFO
-    filename: logconfig/logger.log
-    formatter: detailed
-  
+   
   warn_handler:
     class: logging.FileHandler
     level: WARN
-    filename: warn.log
+    filename: logfiles/warn.log
     formatter: detailed
   
-  root_handler:
+  error_handler:
     class: logging.FileHandler
-    level: DEBUG
-    filename: root.log
+    level: ERROR
+    filename: logfiles/error.log
+    formatter: error
+  
+  critical_handler:
+    class: logging.FileHandler
+    level: CRITICAL
+    filename: logfiles/critical.log
     formatter: detailed
 
+# These loggers can be called using __name__ or inputting string eg logging.getlogger('dev')
 loggers:
   dev:
-    handlers: [console, info_handler]
-    propagate: no
-  anotherone:
-    handlers: [console, info_handler]
+    handlers: [console, debug_handler, info_handler, warn_handler, error_handler, critical_handler, user_interface_handler]
     propagate: no
   example1:
-    handlers: [console, warn_handler]
+    handlers: [console, debug_handler, info_handler, warn_handler, error_handler, critical_handler, user_interface_handler]
     propagate: no
   logconfig:
-    handlers: [console, log_handler]
+    handlers: [console, debug_handler, info_handler, warn_handler, error_handler, critical_handler, log_handler, user_interface_handler]
     propagate: no
+
 # propagate means pass to parent handlers (True or False). Not sure why all these set to no still prints to root.log file
 # https://docs.python.org/3/library/logging.html#logging.Logger.propagate
 root:
-  handlers: [console, root_handler]
-  propagate: no
+  level: NOTSET
+  handlers: [console] #, root_handler, debug_handler, info_handler, warn_handler, error_handler, critical_handler]
+  propagate: yes
