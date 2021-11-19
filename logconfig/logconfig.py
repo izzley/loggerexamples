@@ -3,8 +3,8 @@ import logging.config
 import yaml
 
 class infoFilter(logging.Filter):
-    def filter(self, rec):
-        return rec.levelno == logging.INFO
+    def filter(self, record):
+        return record.levelno == logging.DEBUG
 
 def setuplogging():
     with open('logconfig/config01.YAML', 'r') as f:

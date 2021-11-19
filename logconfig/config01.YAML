@@ -7,7 +7,7 @@ formatters:
   standard:
     format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
   error:
-    format: "%(levelname)s <PID %(process)d:%(processName)s> %(name)s.%(funcName)s(): %(message)s"
+    format: "%(asctime)s - %(levelname)s <PID %(process)d:%(processName)s> %(name)s.%(funcName)s(): %(message)s"
 
 filters:
     infoFilter:
@@ -16,19 +16,18 @@ filters:
 handlers:
   console:
     class: logging.StreamHandler
-    level: DEBUG
+    level: DEBUG # lowest level and above included
     formatter: standard
     stream: ext://sys.stdout
 
-  # debug_file_handler:
-  #   class: logging.handlers.TimedRotatingFileHandler
-  #   level: DEBUG
-  #   formatter: standard
-  #   filename: logfiles/debug.log
-  #   filters: [infoFilter]
-  #   encoding: utf8
-  #   maxBytes: 10485760 # 10MB
-  #   backupCount: 20
+  debug_file_handler:
+    class: logging.handlers.TimedRotatingFileHandler
+    level: DEBUG
+    formatter: standard
+    filename: logfiles/debug.log
+    filters: [infoFilter]
+    encoding: utf8
+    backupCount: 20
 
   info_file_handler:
     class: logging.handlers.TimedRotatingFileHandler
@@ -39,37 +38,34 @@ handlers:
     filters: [infoFilter]
     encoding: utf8
 
-  # warn_file_handler:
-  #   class: logging.handlers.TimedRotatingFileHandler
-  #   level: WARN
-  #   formatter: standard
-  #   filename: logfiles/warn.log
-  #   filters: [infoFilter]
-  #   encoding: utf8
-  #   maxBytes: 10485760 # 10MB
-  #   backupCount: 20
+  warn_file_handler:
+    class: logging.handlers.TimedRotatingFileHandler
+    level: WARN
+    formatter: standard
+    filename: logfiles/warn.log
+    filters: [infoFilter]
+    encoding: utf8
+    backupCount: 20
 
-  # error_file_handler:
-  #   class: logging.handlers.TimedRotatingFileHandler
-  #   level: ERROR
-  #   formatter: error
-  #   filename: logfiles/errors.log
-  #   filters: [infoFilter]
-  #   encoding: utf8
-  #   maxBytes: 10485760 # 10MB
-  #   backupCount: 20
+  error_file_handler:
+    class: logging.handlers.TimedRotatingFileHandler
+    level: ERROR
+    formatter: error
+    filename: logfiles/errors.log
+    filters: [infoFilter]
+    encoding: utf8
+    backupCount: 20
 
-  # critical_file_handler:
-  #   class: logging.handlers.TimedRotatingFileHandler
-  #   level: CRITICAL
-  #   formatter: standard
-  #   filename: logfiles/critical.log
-  #   filters: [infoFilter]
-  #   encoding: utf8
-  #   maxBytes: 10485760 # 10MB
-  #   backupCount: 20
+  critical_file_handler:
+    class: logging.handlers.TimedRotatingFileHandler
+    level: CRITICAL
+    formatter: standard
+    filename: logfiles/critical.log
+    filters: [infoFilter]
+    encoding: utf8
+    backupCount: 20
 
 root:
-  level: NOTSET
-  handlers: [console, info_file_handler]
+  level: DEBUG
+  handlers: [console, debug_file_handler, info_file_handler, warn_file_handler, error_file_handler, critical_file_handler]
   propogate: yes

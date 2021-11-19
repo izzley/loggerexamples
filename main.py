@@ -5,23 +5,23 @@ from logconfig.logconfig import setuplogging
 setuplogging()
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-logger.info("test")
+logger.setLevel(logging.DEBUG) # example set to DEBUG i.e 
 
-# logger.debug("debugging stuff")
+logger.debug("debugging stuff")
+logger.debug("Detailed information, typically of interest only when diagnosing problems.")
 
-# loglogger = logging.getLogger('logconfig')
-# loglogger.setLevel(logging.INFO)
-# loglogger.info("Did anthing run?")
+logger.info("Well thats informative")
+logger.info("Confirmation that things are working as expected.")
 
-# # devlogger level is set to DEBUG and the dev logger is configured to write to debug.log
-# devlogger = logging.getLogger('dev')
-# devlogger.setLevel(logging.DEBUG)
-# devlogger.info("devLogger")
+logger.warning("We're just warning up")
+logger.warning("An indication that something unexpected happened, or indicative of some problem in the near future (e.g. ‘disk space low’). The software is still working as expected.")
 
-# devlogger.warning("We're just warning up")
-# devlogger.critical("Whoa critical error")
+logger.error("Erronius")
+logger.error("Due to a more serious problem, the software has not been able to perform some function.")
 
-# import example1
+logger.critical("Chaos ensues")
+logger.critical("A serious error, indicating that the program itself may be unable to continue running.")
+
+import example1
 
 # print(devlogger.getChild())
