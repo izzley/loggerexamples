@@ -1,5 +1,8 @@
-from logconfig import logconfig
 import logging
+
+from logconfig.logconfig import setuplogging
+
+setuplogging()
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
