@@ -5,7 +5,7 @@ from logconfig.logconfig import setuplogging
 setuplogging()
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG) # example set to DEBUG i.e 
+logger.setLevel(logging.INFO) # example set to DEBUG i.e 
 
 logger.debug("debugging stuff")
 logger.debug("Detailed information, typically of interest only when diagnosing problems.")

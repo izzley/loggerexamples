@@ -4,7 +4,23 @@ import yaml
 
 class infoFilter(logging.Filter):
     def filter(self, record):
+        return record.levelno == logging.INFO
+
+class debugFilter(logging.Filter):
+    def filter(self, record):
         return record.levelno == logging.DEBUG
+
+class warnFilter(logging.Filter):
+    def filter(self, record):
+        return record.levelno == logging.WARNING
+
+class errorFilter(logging.Filter):
+    def filter(self, record):
+        return record.levelno == logging.ERROR
+
+class criticalFilter(logging.Filter):
+    def filter(self, record):
+        return record.levelno == logging.CRITICAL
 
 def setuplogging():
     with open('logconfig/config01.YAML', 'r') as f:
