@@ -16,6 +16,3 @@ def funccalc():
     logger.debug("another thing")
     a = 1 + 1
     return a
-    
-# loggers can output function values too
-logger.info(funccalc())

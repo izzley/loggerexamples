@@ -25,6 +25,6 @@ class criticalFilter(logging.Filter):
         return record.levelno == logging.CRITICAL
 
 def setuplogging():
-    with open('logconfig/config01.YAML', 'r') as f:
+    with open('logconfig/conf.YAML', 'r') as f:
         log_cfg = yaml.safe_load(f.read())
         logging.config.dictConfig(log_cfg)
