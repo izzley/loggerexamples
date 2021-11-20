@@ -1,8 +1,6 @@
 version: 1
 disable_existing_loggers: true
 
-
-
 formatters:
   standard:
     format: "%(asctime)s %(levelname)s - [%(filename)s: line %(lineno)s] - %(funcName)s - %(message)s"
@@ -10,21 +8,21 @@ formatters:
     format: "%(asctime)s - %(levelname)s <PID %(process)d:%(processName)s> %(name)s.%(funcName)s(): %(message)s"
 
 filters:
-    infoFilter:
-        (): logconfig.logconfig.infoFilter # path to class
-    debugFilter:
-        (): logconfig.logconfig.debugFilter # path to class
-    warnFilter:
-        (): logconfig.logconfig.warnFilter # path to class
-    errorFilter:
-        (): logconfig.logconfig.errorFilter # path to class
-    criticalFilter:
-        (): logconfig.logconfig.criticalFilter # path to class
+  infoFilter:
+      (): logconfig.logconfig.infoFilter # path to class
+  debugFilter:
+      (): logconfig.logconfig.debugFilter # path to class
+  warnFilter:
+      (): logconfig.logconfig.warnFilter # path to class
+  errorFilter:
+      (): logconfig.logconfig.errorFilter # path to class
+  criticalFilter:
+      (): logconfig.logconfig.criticalFilter # path to class
 
 handlers:
   console:
     class: logging.StreamHandler
-    level: DEBUG # lowest level and above included
+    level: DEBUG # lowest level up to CRITICAL output to stdout
     formatter: standard
     stream: ext://sys.stdout
 
@@ -76,4 +74,3 @@ handlers:
 root:
   level: DEBUG
   handlers: [console, debug_file_handler, info_file_handler, warn_file_handler, error_file_handler, critical_file_handler]
-  propogate: yes

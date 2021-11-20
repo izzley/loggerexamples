@@ -3,11 +3,19 @@ import logging
 logger = logging.getLogger(__name__)
 logger.info("Running Example1.py")
 
-Bigone = 122000
+CONST = 122000
 
 def running():
-    # did something
-    logger.info(f"yeeeaaah. Look at the func with this Bigone: {Bigone}")
+    # Function does something
+    logger.info(f"This Func outputs a CONST: {CONST}")
     return None
 
-running()
+logger.debug(running())
+
+def random():
+    logger.debug("another thing")
+    a = 1 + 1
+    return a
+    
+# loggers can output function values too
+logger.info(random())
