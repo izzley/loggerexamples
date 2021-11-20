@@ -70,7 +70,16 @@ handlers:
     filters: [criticalFilter]
     encoding: utf8
     backupCount: 20
+  
+  root_file_handler:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: standard
+    filename: logfiles/root.log
+    mode: 'w'
+    # encoding: utf8
+    # backupCount: 20
 
 root:
   level: DEBUG
-  handlers: [console, debug_file_handler, info_file_handler, warn_file_handler, error_file_handler, critical_file_handler]
+  handlers: [console, debug_file_handler, info_file_handler, warn_file_handler, error_file_handler, critical_file_handler, root_file_handler]
