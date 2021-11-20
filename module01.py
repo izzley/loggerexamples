@@ -5,17 +5,17 @@ logger.info("Running Example1.py")
 
 CONST = 122000
 
-def running():
+def proofofconcept():
     # Function does something
     logger.info(f"This Func outputs a CONST: {CONST}")
     return None
 
-logger.debug(running())
+logger.debug(proofofconcept())
 
-def random():
+def funccalc():
     logger.debug("another thing")
     a = 1 + 1
     return a
     
 # loggers can output function values too
-logger.info(random())
+logger.info(funccalc())

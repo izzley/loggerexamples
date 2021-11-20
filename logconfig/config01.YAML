@@ -30,7 +30,7 @@ handlers:
     class: logging.handlers.TimedRotatingFileHandler
     level: DEBUG
     formatter: standard
-    filename: logfiles/debug.log
+    filename: logfiles/10_debug.log
     filters: [debugFilter]
     encoding: utf8
     backupCount: 20
@@ -39,7 +39,7 @@ handlers:
     class: logging.handlers.TimedRotatingFileHandler
     level: INFO
     formatter: standard
-    filename: logfiles/info.log
+    filename: logfiles/20_info.log
     backupCount: 4
     filters: [infoFilter]
     encoding: utf8
@@ -48,7 +48,7 @@ handlers:
     class: logging.handlers.TimedRotatingFileHandler
     level: WARN
     formatter: standard
-    filename: logfiles/warn.log
+    filename: logfiles/30_warn.log
     filters: [warnFilter]
     encoding: utf8
     backupCount: 20
@@ -57,7 +57,7 @@ handlers:
     class: logging.handlers.TimedRotatingFileHandler
     level: ERROR
     formatter: error
-    filename: logfiles/errors.log
+    filename: logfiles/40_errors.log
     filters: [errorFilter]
     encoding: utf8
     backupCount: 20
@@ -66,7 +66,7 @@ handlers:
     class: logging.handlers.TimedRotatingFileHandler
     level: CRITICAL
     formatter: standard
-    filename: logfiles/critical.log
+    filename: logfiles/50_critical.log
     filters: [criticalFilter]
     encoding: utf8
     backupCount: 20

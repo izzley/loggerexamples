@@ -1,4 +1,6 @@
 import logging
+
+# setuplogging function called from __init__.py
 from logconfig import logconfig
 
 logger = logging.getLogger(__name__)
@@ -19,6 +21,6 @@ logger.error("Due to a more serious problem, the software has not been able to p
 logger.critical("Chaos ensues")
 logger.critical("A serious error, indicating that the program itself may be unable to continue running.")
 
+# loggers can output function values too
 import module01
-
-# print(devlogger.getChild())
+logger.info(module01.funccalc())
