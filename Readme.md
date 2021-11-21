@@ -86,6 +86,19 @@ $ echo $(pwd) >> .venv/lib/python3.8/site-packages/my_p_ext.pth
 <br>
 
 @TODO add list of suggestions to inspect
+### Try changing the __main__ logger level from `main_module.py`
+The __main__ logger is first setup from `main_module.py`.
+Notice how the level is set to `DEBUG`?<br> 
+<p align="centre">
+<img src="./docs/01loggerlevelchange.png" alt="logger level change" width="700">
+</p> <br> 
+
+- Run `main_module.py` with this DEBUG setting and take a look at `src/logconfig/root.log`.<br>
+* Now change the level to `WARNING` and spot the difference in `src/logconfig/root.log`. This logger is the `__main__` logger. Notice any changes?<br> 
+<p align="centre">
+<img src="./docs/02loggerrootcompare.png" alt="logger level change" width="700">
+</p>  <br> 
+* Notice everything from `__main__` is greater or equal to `WARNING`? Some `INFO` logs still show because their levels weren't changed. Go ahead and change the loglevel in `other_module.py` to CRITICAL and spot the difference
 
 </details>
 <br>
