@@ -1,5 +1,6 @@
 """
-This module is the main file where all other modules are called from
+This module is the main file where all other modules are called from.
+This repo is designed to run from this file.
 """
 import logging
 from logconfig import logconfig # setuplogging function called from src/logconfig/__init__.py implicitly

@@ -1,5 +1,8 @@
-# __init__.py files are interesting. Python.exe uses them to navigated folders hence they are implicitly called/run.
-# Below setup function is called implicitly from main
+"""
+This module calls the setuplogging function and creates a root logger instance.
+All future loggers will inherit these yaml configurations from this root logger.
+Python uses __init__.py files to navigate between folders. They are implicitly executed.
+"""
 import logging
 from logconfig.logconfig import setuplogging
 from pathlib import Path

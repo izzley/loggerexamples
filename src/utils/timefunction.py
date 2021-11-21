@@ -1,4 +1,5 @@
 """
+Decorator which returns run time for a function
 This decorator is an alternative to using the python timeit module. 
 Calcs the difference between end & start times: https://stackoverflow.com/questions/1622943/timeit-versus-timing-decorator
 

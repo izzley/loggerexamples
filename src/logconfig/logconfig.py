@@ -1,3 +1,7 @@
+"""
+Read conf.YAML and setting up filter classes. This info is parsed to src/logconfig/__init__.py
+"""
+
 import logging
 import logging.config
 from pathlib import Path
