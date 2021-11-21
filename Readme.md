@@ -19,8 +19,9 @@ except they also include [loads of other metadata](https://docs.python.org/3/lib
 * threads (getting very fancy)
 
 <p> 
-<img src="./docs/loguru.png" alt="loguru logo" width="420" align="right">
+<img src="./docs/Loguru.png" alt="loguru logo" width="420" align="right">
 </p>
+
 
 ## I want it all WITHOUT CONFIGURATION!
 No problems. Go to [LOGURU](https://github.com/Delgan/loguru/blob/master/LICENSE)!<br />
