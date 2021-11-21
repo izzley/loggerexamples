@@ -1,4 +1,5 @@
-*.venv310
-*__pycache__*
-*.log
+.venv310
+__pycache__*
+.log
 .venv
+logfiles

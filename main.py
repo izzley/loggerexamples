@@ -2,25 +2,24 @@ import logging
 
 # setuplogging function called from __init__.py
 from logconfig import logconfig
-
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG) # example set to DEBUG i.e 
 
-logger.debug("debugging stuff")
-logger.debug("Detailed information, typically of interest only when diagnosing problems.")
+logger.debug("I deem this a bug... (squish)")
+logger.debug("DEBUG: Detailed information, typically of interest only when diagnosing problems.")
 
-logger.info("Well thats informative")
-logger.info("Confirmation that things are working as expected.")
+logger.info("Well, good sir, thats informative")
+logger.info("INFO: Confirmation that things are working as expected.")
 
 logger.warning("We're just warning up")
-logger.warning("An indication that something unexpected happened, or indicative of some problem in the near future (e.g. ‘disk space low’). The software is still working as expected.")
+logger.warning("WARNING: An indication that something unexpected happened, or indicative of some problem in the near future (e.g. ‘disk space low’). The software is still working as expected.")
 
 logger.error("Erronius")
-logger.error("Due to a more serious problem, the software has not been able to perform some function.")
+logger.error("ERROR: Due to a more serious problem, the software has not been able to perform some function.")
 
 logger.critical("Chaos ensues")
-logger.critical("A serious error, indicating that the program itself may be unable to continue running.")
+logger.critical("CRITICAL: A serious error, indicating that the program itself may be unable to continue running.")
 
 # loggers can output function values too
 import module01
-logger.info(module01.funccalc())
+module01.funccalc(100000000)
