@@ -8,18 +8,18 @@
 ## Loggers are like print() statements
 except they also include [loads of other metadata](https://docs.python.org/3/library/logging.html#logrecord-attributes):
 
-&ensp;&ensp; - timestamp<br />
-&ensp;&ensp; - args (values or variables put into functions)<br />
-&ensp;&ensp; - Function name<br />
-&ensp;&ensp; - level (e.g. DEBUG)<br />
-&ensp;&ensp; - line number (e.g line 42)<br />
-&ensp;&ensp; - msg (same as print!)<br />
-&ensp;&ensp; - module (which python script it came from)<br />
-&ensp;&ensp; - processes (getting fancy)<br />
-&ensp;&ensp; - threads (getting very fancy)<br /><br />
+* timestamp
+* msg (same as print!)
+* args (values or variables put into functions)
+* function name
+* level (e.g. DEBUG)
+* line number (e.g line 42)
+* module (which python script it came from)
+* processes (getting fancy)
+* threads (getting very fancy)
 
 ## I want it all WITHOUT CONFIGURATION!
-No problems. Go to [LOGURU](https://github.com/Delgan/loguru/blob/master/LICENSE). It has all the features of this repo and more. You can pretty much run with minimal config and loads of features.
+No problems. Go to [LOGURU](https://github.com/Delgan/loguru/blob/master/LICENSE)! It has all the features of this repo and more. You can pretty much run with minimal config and loads of features.
 ## Where do I start?
 
 This repo comes bundled with tidy logging configuration files saved in `src/logconfig/`.<br />
@@ -95,12 +95,13 @@ Notice how the level is set to `DEBUG`?<br>
 <img src="./docs/01loggerlevelchange.png" alt="logger level change" width="700">
 </p> <br> 
 
-- Run `main_module.py` with this DEBUG setting and take a look at `src/logconfig/root.log`.<br>
+* Run `main_module.py` with this DEBUG setting and take a look at `src/logconfig/root.log`.<br>
 * Now change the level to `WARNING` and spot the difference in `src/logconfig/root.log`. This logger is the `__main__` logger. Notice any changes?<br> 
 <p align="centre">
 <img src="./docs/02loggerrootcompare.png" alt="logger level change" width="700">
 </p>  <br> 
-* Notice everything from `__main__` is greater or equal to `WARNING`? Some `INFO` logs still show because their levels weren't changed. Go ahead and change the loglevel in `other_module.py` to CRITICAL and spot the difference.
+
+* Notice everything from `__main__` is greater or equal to `WARNING`? Some `INFO` logs still show because their levels weren't changed. Go ahead and change the loglevel in `other_module.py` to `CRITICAL` and spot the difference.
 
 </details>
 <br>
