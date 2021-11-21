@@ -1,9 +1,16 @@
+"""
+This module is the main file where all other modules are called into
+
+"""
+
 import logging
 
-# setuplogging function called from __init__.py
+import module01
+# setuplogging function called from __init__.py implicitly
 from logconfig import logconfig
+
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG) # example set to DEBUG i.e 
+logger.setLevel(logging.DEBUG) # example set to DEBUG i.e all message below will print
 
 logger.debug("I deem this a bug... (squish)")
 logger.debug("DEBUG: Detailed information, typically of interest only when diagnosing problems.")
@@ -21,5 +28,8 @@ logger.critical("Chaos ensues")
 logger.critical("CRITICAL: A serious error, indicating that the program itself may be unable to continue running.")
 
 # loggers can output function values too
-import module01
+
+module01.proofofconcept()
+
 module01.funccalc(100000000)
+

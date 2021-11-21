@@ -76,9 +76,7 @@ handlers:
     level: DEBUG
     formatter: standard
     filename: logfiles/root.log
-    mode: 'w'
-    # encoding: utf8
-    # backupCount: 20
+    mode: 'w' # root.log set to overwrite everytime
 
 root:
   level: DEBUG

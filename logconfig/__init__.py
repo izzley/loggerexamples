@@ -1,7 +1,6 @@
 # __init__.py files are interesting. Python.exe uses them to navigated folders hence they are implicitly called/run.
 # Below setup function is called implicitly from main
 import logging
-from os import mkdir
 from logconfig.logconfig import setuplogging
 from pathlib import Path
 
@@ -9,7 +8,7 @@ from pathlib import Path
 if not (Path.cwd() / "logfiles").exists():
     Path.mkdir(Path.cwd() / "logfiles")
 
-# take a look at logconfig.py
+# setuplogging function called from logconfig.py
 setuplogging()
 
 logger = logging.getLogger(__name__)
