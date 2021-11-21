@@ -1,7 +1,8 @@
 # Upgrade your print statements
-<p>
-<img src="./docs/morpheus.jpg" alt="print statement meme" width="700" align="centre" style="padding-right: 30px; padding left: 20px;">
-<p>
+
+<p align="centre">
+<img src="./docs/morpheus.jpg" alt="print statement meme" width="700">
+</p>
 
 
 ## Loggers are like print() statements
