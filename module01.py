@@ -14,7 +14,7 @@ def proofofconcept():
 
 @timing
 def funccalc(n):
-    logger.debug("another thing")
+    logger.debug("something executed")
     for _ in range(n):
         i = 0
     return
