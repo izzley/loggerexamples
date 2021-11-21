@@ -1,26 +1,26 @@
 # Upgrade your print statements
 <p>
-<img src="./docs/morpheus.jpg" alt="print statement meme" width="400" align="centre" style="padding-right: 30px; padding left: 20px;">
+<img src="./docs/morpheus.jpg" alt="print statement meme" width="470" height="285" align="left" style="padding-right: 30px; padding left: 20px;">
 <p>
 
 
+## Loggers are like print() statements
+except they also include [loads of other metadata](https://docs.python.org/3/library/logging.html#logrecord-attributes):
 
-Logging does exactly what print statements do except better. They include [loads of other metadata](https://docs.python.org/3/library/logging.html#logrecord-attributes) like:
-
-* timestamp
-* args (values or variables put into functions)
-* Function name
-* level (e.g. DEBUG)
-* line number (e.g line 42)
-* msg (same as print!)
-* module (which python script it came from)
-* processes (getting fancy)
-* threads (getting very fancy)
+&ensp;&ensp; - timestamp<br />
+&ensp;&ensp; - args (values or variables put into functions)<br />
+&ensp;&ensp; - Function name<br />
+&ensp;&ensp; - level (e.g. DEBUG)<br />
+&ensp;&ensp; - line number (e.g line 42)<br />
+&ensp;&ensp; - msg (same as print!)<br />
+&ensp;&ensp; - module (which python script it came from)<br />
+&ensp;&ensp; - processes (getting fancy)<br />
+&ensp;&ensp; - threads (getting very fancy)<br /><br />
 
 ## Where do I start?
 
-There are loads of online articles but not many address how to configure complex loggers with filters and yaml files. This repo comes bundled with tidy logging configuration files - look at the `logconfig/` folder.<br />
-There is also a timing decorator in `utils/` so you can optimize your code just by putting `@timing` above your function.
+There are loads of online articles but very few clearly explain how to configure complex loggers with filters and yaml files. This repo comes bundled with tidy logging configuration files saved in `src/logconfig/`.<br />
+There is also a timing decorator in `src/utils/` so you can optimize your code by simply decorating your function with `@timing` above it.
 <br />
 To see loggers in action, setup a virtual environment and then run `main.py`
 
@@ -28,7 +28,7 @@ To see loggers in action, setup a virtual environment and then run `main.py`
 
  * Python 3.7+
 
-<sup>(I haven't tried any earlier version)</sup>
+<sup>(I haven't tried any earlier version as of 21st November 2021)</sup>
 
 ## Quickstart - Git clone and virtual env setup
 
@@ -103,7 +103,8 @@ def funccalc(n):
         i = 0
     return
 ```
-The output reflects the yaml file formatting: formatters > standard > format
+
+The output reflects the yaml file format settings:
 
 ```bash
 2021-11-21 15:43:47,689 DEBUG - [module01.py: line 17] - funccalc - something executed
@@ -111,7 +112,7 @@ The output reflects the yaml file formatting: formatters > standard > format
 
 
 ### loggers
-
+@TODO describe root loggers and their inheritance
 ```json
 root:
   level: DEBUG
@@ -123,12 +124,19 @@ root:
 </p>
 
 ### handlers
+@TODO describe handlers and how they redirect bytes
 
 ### filters
+@TODO describe how filters only allow bytes to handlers if a condition is true. reference filter classes in logconfig.py
 
 
 </details>
 
 ## References
+Docs: https://docs.python.org/3/library/logging.html#module-logging
+lots of logging examples: https://zetcode.com/python/logging/
+timeit vs decorator: https://stackoverflow.com/questions/1622943/timeit-versus-timing-decorator
+real python uses perf_counter: https://realpython.com/lessons/timing-functions-decorators/
+What are decorators: https://gist.github.com/Zearin/2f40b7b9cfc51132851a
+Decorators can be reinforced to accept args: https://stackoverflow.com/questions/653368/how-to-create-a-python-decorator-that-can-be-used-either-with-or-without-paramet
 
-- https://zetcode.com/python/logging/
