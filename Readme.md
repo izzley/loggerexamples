@@ -20,10 +20,10 @@ except they also include [loads of other metadata](https://docs.python.org/3/lib
 
 ## Where do I start?
 
-There are loads of online articles but very few clearly explain how to configure complex loggers with filters and yaml files. This repo comes bundled with tidy logging configuration files saved in `src/logconfig/`.<br />
-There is also a timing decorator in `src/utils/` so you can optimize your code by simply decorating your function with `@timing` above it.
+This repo comes bundled with tidy logging configuration files saved in `src/logconfig/`.<br />
+There is also a timing decorator in `src/utils/` so you can optimize your code by simply decorating your function with `@timing` above it. There are many online articles but very few clearly explain how to configure complex loggers with filters and yaml files. 
 <br />
-To see loggers in action, setup a virtual environment and then run `main.py`
+To see loggers in action, setup a virtual environment and then run `src/mainmodule.py`
 
 ## Requirements
 
@@ -74,6 +74,16 @@ parent folder/s to the file:
 ```
 $ echo $(pwd) >> .venv/lib/python3.8/site-packages/my_p_ext.pth
 ```
+
+## Play with the logger
+
+<details>
+<summary>Walkthroughs</summary>
+
+--- 
+<br>
+
+@TODO add list of suggestions to inspect
 
 </details>
 <br>
