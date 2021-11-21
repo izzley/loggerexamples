@@ -24,9 +24,8 @@ except they also include [loads of other metadata](https://docs.python.org/3/lib
 <img src="./docs/Loguru.png" alt="loguru logo" width="420" align="right">
 </p>
 
-No problems. Go to [LOGURU](https://github.com/Delgan/loguru/blob/master/LICENSE)!<br />
-You can pretty much run with minimal config and loads of features. It has all the features of this repo and more, along with a badass logo.
-
+No problems. Check out the [Loguru](https://github.com/Delgan/loguru) repo!<br />
+You can pretty much run with minimal config and loads of features. Loguru has all the features of this repo and more, along with a badass logo.
 
 
 ## Where do I start?
