@@ -1,6 +1,6 @@
 # Upgrade your print statements
 <p>
-<img src="./docs/morpheus.jpg" alt="print statement meme" width="470" height="285" align="left" style="padding-right: 30px; padding left: 20px;">
+<img src="./docs/morpheus.jpg" alt="print statement meme" width="700" align="centre" style="padding-right: 30px; padding left: 20px;">
 <p>
 
 
