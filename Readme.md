@@ -148,6 +148,7 @@ root:
 ## References
 * Docs: https://docs.python.org/3/library/logging.html#module-logging
 * lots of logging examples: https://zetcode.com/python/logging/
+* filters explained: https://gist.github.com/kingspp/9451566a5555fb022215ca2b7b802f19
 * timeit vs decorator: https://stackoverflow.com/questions/1622943/timeit-versus-timing-decorator
 * real python uses perf_counter: https://realpython.com/lessons/timing-functions-decorators/
 * What are decorators: https://gist.github.com/Zearin/2f40b7b9cfc51132851a
