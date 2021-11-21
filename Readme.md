@@ -105,12 +105,12 @@ Notice how the level is set to `DEBUG`?<br>
 </p> <br> 
 
 * Run `main_module.py` with this DEBUG setting and take a look at `src/logconfig/root.log`.<br>
-* Now change the level to `WARNING` and spot the difference in `src/logconfig/root.log`. This logger is the `__main__` logger. Notice any changes?<br> 
+* Now change the level to `WARNING` and spot the difference in `src/logconfig/root.log`. Remember this is the `__main__` logger. Notice any changes?<br> 
 <p align="centre">
 <img src="./docs/02loggerrootcompare.png" alt="logger level change" width="700">
 </p>  <br> 
 
-* Notice everything from `__main__` is greater or equal to `WARNING`? Some `INFO` logs still show because their levels weren't changed. Go ahead and change the loglevel in `other_module.py` to `CRITICAL` and spot the difference.
+* Notice everything from `__main__` is greater or equal to `WARNING`? The logs running from `other_module.py` are still showing because we haven't changed its log level. Go ahead and change the loglevel in `other_module.py` to `CRITICAL` and spot the difference.
 
 </details>
 <br>
@@ -173,6 +173,8 @@ root:
 ## References
 * Docs: https://docs.python.org/3/library/logging.html#module-logging
 * lots of logging examples: https://zetcode.com/python/logging/
+* loguru. Everyone should know about it: https://github.com/Delgan/loguru#readme
+* rich logging handler makes it pretty: https://rich.readthedocs.io/en/stable/logging.html
 * filters explained: https://gist.github.com/kingspp/9451566a5555fb022215ca2b7b802f19
 * timeit vs decorator: https://stackoverflow.com/questions/1622943/timeit-versus-timing-decorator
 * real python uses perf_counter: https://realpython.com/lessons/timing-functions-decorators/

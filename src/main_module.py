@@ -4,6 +4,8 @@ This repo is designed to run from this file.
 """
 import logging
 from logconfig import logconfig # setuplogging function called from src/logconfig/__init__.py implicitly
+# @TODO: Get RichHandler happening. https://rich.readthedocs.io/en/stable/logging.html
+from rich.logging import RichHandler
 import other_module
 
 logger = logging.getLogger(__name__)
