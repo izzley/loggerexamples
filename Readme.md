@@ -18,6 +18,8 @@ except they also include [loads of other metadata](https://docs.python.org/3/lib
 &ensp;&ensp; - processes (getting fancy)<br />
 &ensp;&ensp; - threads (getting very fancy)<br /><br />
 
+## I want it all WITHOUT CONFIGURATION!
+No problems. Go to [LOGURU](https://github.com/Delgan/loguru/blob/master/LICENSE). It has all the features of this repo and more. You can pretty much run with minimal config and loads of features.
 ## Where do I start?
 
 This repo comes bundled with tidy logging configuration files saved in `src/logconfig/`.<br />
@@ -27,9 +29,9 @@ To see loggers in action, setup a virtual environment and then run `src/mainmodu
 
 ## Requirements
 
- * Python 3.7+
+ * Python 3.6+
 
-<sup>(I haven't tried any earlier version as of 21st November 2021)</sup>
+<sup>(Feel free to submit earlier versions that work)</sup>
 
 ## Quickstart - Git clone and virtual env setup
 
@@ -98,7 +100,7 @@ Notice how the level is set to `DEBUG`?<br>
 <p align="centre">
 <img src="./docs/02loggerrootcompare.png" alt="logger level change" width="700">
 </p>  <br> 
-* Notice everything from `__main__` is greater or equal to `WARNING`? Some `INFO` logs still show because their levels weren't changed. Go ahead and change the loglevel in `other_module.py` to CRITICAL and spot the difference
+* Notice everything from `__main__` is greater or equal to `WARNING`? Some `INFO` logs still show because their levels weren't changed. Go ahead and change the loglevel in `other_module.py` to CRITICAL and spot the difference.
 
 </details>
 <br>
