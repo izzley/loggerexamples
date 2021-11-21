@@ -1,9 +1,10 @@
-# from logconfig import logconfig # The root logger does not need to be imported each time IF the root logger (i.e logconfig.logconfig) has been called from main
+"""
+This is an example of a first party module (written by you) using logging messages and the timing decorator
+"""
 import logging
 from utils.timefunction import timing
 
-# If this file is not run from mainmodule.py, its not configured from logconfig yet
-# so need to import the configuration files to setup root logger
+# If this file is not run from mainmodule.py, the root logger is not configured yet from src/logconfig.
 if __name__ == "__main__":
     from logconfig import logconfig
 
