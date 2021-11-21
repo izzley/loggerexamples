@@ -75,6 +75,8 @@ parent folder/s to the file:
 $ echo $(pwd) >> .venv/lib/python3.8/site-packages/my_p_ext.pth
 ```
 
+</details>
+
 ## Play with the logger
 
 <details>
@@ -144,10 +146,10 @@ root:
 </details>
 
 ## References
-Docs: https://docs.python.org/3/library/logging.html#module-logging
-lots of logging examples: https://zetcode.com/python/logging/
-timeit vs decorator: https://stackoverflow.com/questions/1622943/timeit-versus-timing-decorator
-real python uses perf_counter: https://realpython.com/lessons/timing-functions-decorators/
-What are decorators: https://gist.github.com/Zearin/2f40b7b9cfc51132851a
-Decorators can be reinforced to accept args: https://stackoverflow.com/questions/653368/how-to-create-a-python-decorator-that-can-be-used-either-with-or-without-paramet
+* Docs: https://docs.python.org/3/library/logging.html#module-logging
+* lots of logging examples: https://zetcode.com/python/logging/
+* timeit vs decorator: https://stackoverflow.com/questions/1622943/timeit-versus-timing-decorator
+* real python uses perf_counter: https://realpython.com/lessons/timing-functions-decorators/
+* What are decorators: https://gist.github.com/Zearin/2f40b7b9cfc51132851a
+* Decorators can be reinforced to accept args: https://stackoverflow.com/questions/653368/how-to-create-a-python-decorator-that-can-be-used-either-with-or-without-paramet
 
