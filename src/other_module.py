@@ -14,7 +14,7 @@ logger.info("Running module01.py")
 CONST = 122000
 
 @timing
-def proofofconcept():
+def proof_concept():
     """
     Loggers can run from anywhere including within funcs
     """
@@ -22,7 +22,7 @@ def proofofconcept():
     return None
 
 @timing
-def funccalc(n):
+def func_calc(n):
     """
     Take a look at the start and finish times in the console or logfiles/root.log
     """
@@ -34,4 +34,4 @@ def funccalc(n):
 
 
 if __name__ == "__main__":
-    funccalc(100000000)
+    func_calc(100000000)

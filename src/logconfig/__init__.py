@@ -4,7 +4,7 @@ All future loggers will inherit these yaml configurations from this root logger.
 Python uses __init__.py files to navigate between folders. They are implicitly executed.
 """
 import logging
-from logconfig.logconfig import setuplogging
+from logconfig.logconfig import setup_logging
 from pathlib import Path
 
 # make sure logfiles/ directory exists
@@ -13,7 +13,7 @@ if not p.exists():
     Path.mkdir(p)
 
 # setuplogging function called from logconfig.py
-setuplogging()
+setup_logging()
 
 logger = logging.getLogger(__name__)
 

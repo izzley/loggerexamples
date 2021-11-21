@@ -8,16 +8,16 @@ formatters:
     format: "%(asctime)s - %(levelname)s <PID %(process)d:%(processName)s> %(name)s.%(funcName)s(): %(message)s"
 
 filters:
-  infoFilter:
-      (): logconfig.logconfig.infoFilter # path to class
-  debugFilter:
-      (): logconfig.logconfig.debugFilter # path to class
-  warnFilter:
-      (): logconfig.logconfig.warnFilter # path to class
-  errorFilter:
-      (): logconfig.logconfig.errorFilter # path to class
-  criticalFilter:
-      (): logconfig.logconfig.criticalFilter # path to class
+  InfoFilter:
+      (): logconfig.logconfig.InfoFilter # path to class
+  DebugFilter:
+      (): logconfig.logconfig.DebugFilter # path to class
+  WarnFilter:
+      (): logconfig.logconfig.WarnFilter # path to class
+  ErrorFilter:
+      (): logconfig.logconfig.ErrorFilter # path to class
+  CriticalFilter:
+      (): logconfig.logconfig.CriticalFilter # path to class
 
 handlers:
   console:
@@ -31,7 +31,7 @@ handlers:
     level: DEBUG
     formatter: standard
     filename:  src/logfiles/10_debug.log
-    filters: [debugFilter]
+    filters: [DebugFilter]
     encoding: utf8
     backupCount: 20
 
@@ -41,7 +41,7 @@ handlers:
     formatter: standard
     filename: src/logfiles/20_info.log
     backupCount: 4
-    filters: [infoFilter]
+    filters: [InfoFilter]
     encoding: utf8
 
   warn_file_handler:
@@ -49,7 +49,7 @@ handlers:
     level: WARN
     formatter: standard
     filename: src/logfiles/30_warn.log
-    filters: [warnFilter]
+    filters: [WarnFilter]
     encoding: utf8
     backupCount: 20
 
@@ -58,7 +58,7 @@ handlers:
     level: ERROR
     formatter: error
     filename: src/logfiles/40_errors.log
-    filters: [errorFilter]
+    filters: [ErrorFilter]
     encoding: utf8
     backupCount: 20
 
@@ -67,7 +67,7 @@ handlers:
     level: CRITICAL
     formatter: standard
     filename: src/logfiles/50_critical.log
-    filters: [criticalFilter]
+    filters: [CriticalFilter]
     encoding: utf8
     backupCount: 20
   

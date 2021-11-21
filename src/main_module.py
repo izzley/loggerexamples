@@ -4,7 +4,7 @@ This repo is designed to run from this file.
 """
 import logging
 from logconfig import logconfig # setuplogging function called from src/logconfig/__init__.py implicitly
-import module01
+import other_module
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG) # example set to DEBUG i.e all message set to debug or higher output something
@@ -25,7 +25,7 @@ logger.critical("Chaos ensues")
 logger.critical("CRITICAL: A serious error, indicating that the program itself may be unable to continue running.")
 
 # module01 functions called with loggers in them
-module01.proofofconcept()
-module01.funccalc(100000000)
+other_module.proof_concept()
+other_module.func_calc(100000000)
 
 # logger.debug("End of the line", stack_info=True)
