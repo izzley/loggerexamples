@@ -19,7 +19,15 @@ except they also include [loads of other metadata](https://docs.python.org/3/lib
 * threads (getting very fancy)
 
 ## I want it all WITHOUT CONFIGURATION!
-No problems. Go to [LOGURU](https://github.com/Delgan/loguru/blob/master/LICENSE)! It has all the features of this repo and more. You can pretty much run with minimal config and loads of features.
+No problems. Go to [LOGURU](https://github.com/Delgan/loguru/blob/master/LICENSE)!<br />
+You can pretty much run with minimal config and loads of features. It has all the features of this repo and more, along with a badass logo.
+
+<p align="centre">
+<img src="https://images.app.goo.gl/4pYLmT4mXvbrQwhM9" alt="loguru logo" width="500">
+</p>
+
+<a href="https://images.app.goo.gl/4pYLmT4mXvbrQwhM9" rel="Loguru"></a>
+
 ## Where do I start?
 
 This repo comes bundled with tidy logging configuration files saved in `src/logconfig/`.<br />
