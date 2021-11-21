@@ -7,7 +7,7 @@ from logconfig import logconfig # setuplogging function called from src/logconfi
 import other_module
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.WARNING) # example set to DEBUG i.e all message set to debug or higher output something
+logger.setLevel(logging.DEBUG) # example set to DEBUG i.e all message set to debug or higher output something
 
 logger.debug("I deem this a bug... (squish)")
 logger.debug("DEBUG: Detailed information, typically of interest only when diagnosing problems.")
