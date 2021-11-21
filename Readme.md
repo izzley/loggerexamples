@@ -17,26 +17,35 @@ Logging does exactly what print statements do except better. They include [loads
 * processes (getting fancy)
 * threads (getting very fancy)
 
-## Ok so how do I get started?
+## Where do I start?
 
-All of the nasty logging configuration has been done already in `logconfig/` folder.<br />
+There are loads of online articles but not many address how to configure complex loggers with filters and yaml files. This repo comes bundled with tidy logging configuration files - look at the `logconfig/` folder.<br />
 There is also a timing decorator in `utils/` so you can optimize your code just by putting `@timing` above your function.
-<br /><br />
-Now to see loggers in action, setup a virtual environment and then run `main.py`
+<br />
+To see loggers in action, setup a virtual environment and then run `main.py`
 
 ## Requirements
 
  * Python 3.7+
 
-<sup>I haven't tried any earlier version</sup>
-## Quickstart - Windows using powershell or CMD
+<sup>(I haven't tried any earlier version)</sup>
+
+## Quickstart - Git clone and virtual env setup
+
+<details>
+<summary>Quickstart Instructions</summary>
+
+--- 
+<br>
+
+## Windows using powershell or CMD
 
 cd to clone directory. Create virtual env with pip + venv:
 
 ```powershell
 git clone https://github.com/izzley/loggerexamples
-cd loggerexample\
-py -0p # Optional: check your version and path.
+cd loggerexamples\
+py -0p # Optional: check your version and python path
 py -m venv .venv
 .venv\Scripts\activate
 pip install --upgrade pip
@@ -46,19 +55,12 @@ pip install -r requirements.txt
 .\src\main.py
 ```
 
-For SSL certificate errors to pypi.org you can include options to trust (PyYaml is the only package we need and it is trustworthy).
-
-```
-pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org -upgrade pip
-pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org -r requirements.txt
-```
-
-## Quickstart - Linux/Mac
+## Linux/Mac
 
 ```sh
 cd /to/clone/location
-git clone https://github.com/mottmacdonaldglobal/PowerBI_git
-cd /PowerBI_git/
+git clone https://github.com/izzley/loggerexamples
+cd loggerexamples/
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
@@ -72,20 +74,25 @@ parent folder/s to the file:
 $ echo $(pwd) >> .venv/lib/python3.8/site-packages/my_p_ext.pth
 ```
 
+</details>
+<br>
 
+## Whats in the YAML file??
 
-<details><summary><b>
-Whats in the YAML file??
-</b></summary>
+<details>
+<summary>YAML parts</summary>
 
-In short, all of the instructions for how the logger should behave.
+--- 
+<br>
+
+In short, the `conf.YAML` file contains all of the instructions for how the logger should behave. Below breaks down the conf yaml file into its parts:
 ### formatters
 
 
 ```json
 formatters:
-  standard:
-    format: "%(asctime)s %(levelname)s - [%(filename)s: line %(lineno)s] - %(funcName)s - %(message)s"
+    standard:
+        format: "%(asctime)s %(levelname)s - [%(filename)s: line %(lineno)s] - %(funcName)s - %(message)s"
 ```
 
 Take this logger for example:
@@ -96,9 +103,10 @@ def funccalc(n):
         i = 0
     return
 ```
+The output reflects the yaml file formatting: formatters > standard > format
 
 ```bash
-2021-11-21 15:43:47,689 DEBUG - [module01.py: line 17] - funccalc - another thing
+2021-11-21 15:43:47,689 DEBUG - [module01.py: line 17] - funccalc - something executed
 ```
 
 
@@ -118,6 +126,8 @@ root:
 
 ### filters
 
+
+</details>
 
 ## References
 

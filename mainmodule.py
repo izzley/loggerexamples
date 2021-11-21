@@ -1,6 +1,5 @@
 """
-This module is the main file where all other modules are called into
-
+This module is the main file where all other modules are called from
 """
 
 import logging
@@ -10,7 +9,7 @@ import module01
 from logconfig import logconfig
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG) # example set to DEBUG i.e all message below will print
+logger.setLevel(logging.DEBUG) # example set to DEBUG i.e all message set to debug or higher output something
 
 logger.debug("I deem this a bug... (squish)")
 logger.debug("DEBUG: Detailed information, typically of interest only when diagnosing problems.")
@@ -33,3 +32,4 @@ module01.proofofconcept()
 
 module01.funccalc(100000000)
 
+logger.debug("End of the line", stack_info=True)

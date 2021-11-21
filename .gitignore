@@ -1,7 +1,7 @@
 .venv310
 .venvbash
 .venv3.7
-__pycache__*
+__pycache__
 .log
 .venv
 logfiles
