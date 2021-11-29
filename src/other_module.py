@@ -13,6 +13,7 @@ logger.info("Running module01.py")
 
 CONST = 122000
 
+
 @timing
 def proof_concept():
     """
@@ -20,6 +21,7 @@ def proof_concept():
     """
     logger.info(f"This Func outputs a CONST: {CONST}")
     return None
+
 
 @timing
 def func_calc(n):
