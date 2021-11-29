@@ -14,11 +14,10 @@ if not p.exists():
 
 # setuplogging function called from logconfig.py
 setup_logging()
-logging.RootLogger(
-    # Change this to change output levels
-    level=logging.DEBUG
-    
-    )
+
+# Root logger instance
+logging.RootLogger(level=logging.DEBUG)
+
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
