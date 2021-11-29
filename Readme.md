@@ -64,7 +64,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 # run main script
-python .\src\main.py
+python .\src\main_module.py
 ```
 
 ## Linux/Mac
