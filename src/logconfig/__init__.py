@@ -16,7 +16,7 @@ if not p.exists():
 setup_logging()
 logging.RootLogger(
     # Change this to change output levels
-    level=logging.WARNING
+    level=logging.DEBUG
     
     )
 

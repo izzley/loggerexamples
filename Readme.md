@@ -51,7 +51,8 @@ To see loggers in action, setup a virtual environment and then run `src/mainmodu
 
 ## Windows using powershell or CMD
 
-cd to clone directory. Create virtual env with pip + venv:
+Create virtual env with pip + venv.<br>
+`cd` to your home directory and copy-paste each line or the entire code block below into powershell or CMD:
 
 ```powershell
 git clone https://github.com/izzley/loggerexamples
@@ -63,7 +64,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 # run main script
-.\src\main.py
+python .\src\main.py
 ```
 
 ## Linux/Mac
