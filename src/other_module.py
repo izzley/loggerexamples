@@ -29,8 +29,7 @@ def func_calc(n):
     Take a look at the start and finish times in the console or logfiles/root.log
     """
     logger.warning("started")
-    for _ in range(n):
-        i = 0
+    i = 0
     logger.warning("finished")
     return
 
